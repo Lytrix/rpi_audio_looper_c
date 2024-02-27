@@ -786,7 +786,8 @@ void controlStateCheck(void)
  * Output: pass/fail of init process
  * Description:
  *   Intialize the serial port, create the serial monitoring thread
- *
+ *   Use ttyAMA0 for Serial UART via Rx Tx pins
+ *   Use ttyACM0 for Usb Serial like a Teensy 
  */
 bool controlInit(struct MasterLooper *mLooper)
 {
@@ -798,7 +799,11 @@ bool controlInit(struct MasterLooper *mLooper)
         return false;
     }
 
-    looper->sfd = serialOpen("/dev/ttyAMA0",  115200);
+    // Original setup
+    // looper->sfd = serialOpen("/dev/ttyAMA0",  115200);
+    // Teensy
+    looper->sfd = serialOpen("/dev/ttyACM0",  115200); 
+
     if (looper->sfd < 0)
     {
         printf("Error setting up serial port\n");
