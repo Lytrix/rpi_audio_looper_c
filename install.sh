@@ -9,10 +9,9 @@ cd ${DIR}/WiringPi/wiringPi
 make 
 sudo make install
 cd ..
-rm -rf WiringPi
+rm -rf ${DIR}/WiringPi
 echo '-------------------------------'
 echo 'Start Building RPI Audio Looper'
 echo '-------------------------------'
 cd ${DIR}/src
 make
-sudo make install
