@@ -1,9 +1,11 @@
 #! /bin/bash
+
 echo '-------------------------------'
 echo 'Downloading and Installing Dependency..'
 echo '-------------------------------'
-git clone https://github.com/WiringPi/WiringPi
-cd WiringPi
+DIR="$(pwd)"
+git clone https://github.com/WiringPi/WiringPi ${DIR}/WiringPi
+cd ${DIR}/WiringPi/wiringPi
 make 
 sudo make install
 cd ..
