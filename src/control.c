@@ -54,6 +54,8 @@
  * Macros and defines                                         *
  *************************************************************/
 
+#define TERMINAL "/dev/ttyACM0"
+
 /**************************************************************
  * Data types                                                 *
  *************************************************************/
@@ -802,7 +804,7 @@ bool controlInit(struct MasterLooper *mLooper)
     // Original setup
     // looper->sfd = serialOpen("/dev/ttyAMA0",  115200);
     // Teensy
-    looper->sfd = serialOpen("/dev/ttyACM0",  115200); 
+    looper->sfd = serialOpen(TERMINAL,  115200); 
 
     if (looper->sfd < 0)
     {

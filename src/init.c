@@ -16,13 +16,13 @@
 
 #include <stdio.h>
 #include <errno.h>
-#include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 #include <fcntl.h>
-#include <sys/ioctl.h>
 #include <termios.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
 
 #include <limits.h>
 #include <float.h>
