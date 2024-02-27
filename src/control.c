@@ -394,7 +394,7 @@ static void updateRepeatStatus(void)
  *   Handle the passed event for the passthrough state
  *
  */
-static void eventHandlerPassthrough(event)
+static void eventHandlerPassthrough(uint8_t event)
 {
     switch(event)
     {
@@ -430,7 +430,7 @@ static void eventHandlerPassthrough(event)
  *   Handle the passed event for the playback state
  *
  */
-static void eventHandlerPlayback(event)
+static void eventHandlerPlayback(uint8_t event)
 {
     switch(event)
     {
@@ -474,7 +474,7 @@ static void eventHandlerPlayback(event)
  *   Handle the passed event for the recording state
  *
  */
-static void eventHandlerRecording(event)
+static void eventHandlerRecording(uint8_t event)
 {
     switch(event)
     {
@@ -511,7 +511,7 @@ static void eventHandlerRecording(event)
  *   Handle the passed event for the overdubbing state
  *
  */
-static void eventHandlerOverdubbing(event)
+static void eventHandlerOverdubbing(uint8_t event)
 {
     switch(event)
     {
