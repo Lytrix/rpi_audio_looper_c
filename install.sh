@@ -2,7 +2,7 @@
 echo '-------------------------------'
 echo 'Downloading and Installing Dependency..'
 echo '-------------------------------'
-git clone https://github.com/WiringPi/WiringPi/tree/final_official_2.50
+git clone https://github.com/WiringPi/WiringPi
 cd WiringPi
 make 
 sudo make install
