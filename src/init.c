@@ -21,15 +21,15 @@
 #include <string.h>
 #include <stdbool.h>
 #include <fcntl.h>
-#include <termios.h>
 #include <sys/ioctl.h>
+#include <termios.h>
 
 #include <limits.h>
 #include <float.h>
 
-#include "local.h"
-
 #include <jack/jack.h>
+
+#include "local.h"
 
 /**************************************************************
  * Macros and defines                                         *
