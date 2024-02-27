@@ -13,6 +13,6 @@ rm -rf WiringPi
 echo '-------------------------------'
 echo 'Start Building RPI Audio Looper'
 echo '-------------------------------'
-cd src
+cd ${DIR}/src
 make
 sudo make install
