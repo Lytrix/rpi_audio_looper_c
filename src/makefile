@@ -6,7 +6,7 @@ OBJ = $(SRC:.c=.o)
 
 # Compiler, Linker
 CC = gcc
-LIBS = -lasound -lm -lwiringPi -lrt
+LIBS = -lasound -lm -lwiringPi -lrt -lpthread
 CFLAGS = -g `pkg-config --cflags --libs jack`
 
 default: $(TARGET)
