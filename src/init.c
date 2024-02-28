@@ -183,10 +183,9 @@ int main (int argc, char *argv[])
 
 	jack_on_shutdown (looper.client, jack_shutdown, 0);
 
-	/* Set and display the current sample rate. 
+	/* Display the current sample rate. 
 	 */
 
-	&SAMPLE_RATE_DEVICE = jack_get_sample_rate(looper.client);
 	printf ("Set sample rate to Jack Server set sample rate: %" PRIu32 "\n",
 		jack_get_sample_rate (looper.client));
 	
