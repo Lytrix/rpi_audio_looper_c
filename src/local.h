@@ -32,7 +32,7 @@
 #define TRACK_MAX_LENGTH_S              (60)
 #define NUM_GROUPS                      (4)
 #define NUM_TRACKS                      (16)
-#define SAMPLE_LIMIT                    (SAMPLE_RATE_DEVICE * TRACK_MAX_LENGTH_S)
+#define SAMPLE_LIMIT                    (44100 * TRACK_MAX_LENGTH_S)
 #define FRAME_COUNT                     (SAMPLE_LIMIT + 512)
 #define GPIO_ISR_DEBOUNCE_MS            (500)
 // Serial interface commands
