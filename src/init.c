@@ -183,12 +183,13 @@ int main (int argc, char *argv[])
 
 	jack_on_shutdown (looper.client, jack_shutdown, 0);
 
-	/* display the current sample rate. 
+	/* Set and display the current sample rate. 
 	 */
 
-	printf ("engine sample rate: %" PRIu32 "\n",
+	SAMPLE_RATE_DEVICE = jack_get_sample_rate (looper.client);
+	printf ("Set sample rate to Jack Server set sample rate: %" PRIu32 "\n",
 		jack_get_sample_rate (looper.client));
-
+	
 	/* create four ports -- left in and out, right in and out */
 
 	looper.input_portL = jack_port_register (looper.client, "inputL",
