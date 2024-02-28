@@ -54,8 +54,6 @@
  * Macros and defines                                         *
  *************************************************************/
 
-#define TERMINAL "/dev/ttyACM0"
-
 /**************************************************************
  * Data types                                                 *
  *************************************************************/
@@ -788,8 +786,6 @@ void controlStateCheck(void)
  * Output: pass/fail of init process
  * Description:
  *   Intialize the serial port, create the serial monitoring thread
- *   Use ttyAMA0 for Serial UART via Rx Tx pins
- *   Use ttyACM0 for Usb Serial like a Teensy 
  */
 bool controlInit(struct MasterLooper *mLooper)
 {
@@ -804,7 +800,7 @@ bool controlInit(struct MasterLooper *mLooper)
     // Original setup
     // looper->sfd = serialOpen("/dev/ttyAMA0",  115200);
     // Teensy
-    looper->sfd = serialOpen(TERMINAL,  115200); 
+    looper->sfd = serialOpen(SERIAL_TERMINAL, SERIAL_BAUD_RATE); 
 
     if (looper->sfd < 0)
     {

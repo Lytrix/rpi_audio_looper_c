@@ -28,13 +28,16 @@
  * Macros and defines                                         *
  *************************************************************/
 #define MAX_SAMPLE_VALUE                (UINT16_MAX) // match to audio capture device, 220 is 16bit
+#define SAMPLE_RATE_DEVICE              (44100) // match to audio device, 44100/48000/96000/192000
 #define TRACK_MAX_LENGTH_S              (60)
 #define NUM_GROUPS                      (4)
 #define NUM_TRACKS                      (16)
-#define SAMPLE_LIMIT                    (44100 * TRACK_MAX_LENGTH_S)
+#define SAMPLE_LIMIT                    (SAMPLE_RATE_DEVICE * TRACK_MAX_LENGTH_S)
 #define FRAME_COUNT                     (SAMPLE_LIMIT + 512)
 #define GPIO_ISR_DEBOUNCE_MS            (500)
 // Serial interface commands
+#define SERIAL_TERMINAL                 "/dev/ttyACM0" // /dev/ttyACM0 for Teensy/Arduino, /dev/ttyAMA0 for Serial UART via Rx Tx pins
+#define SERIAL_BAUD_RATE                (115200)
 #define MIN_SERIAL_DATA_LENGTH          (6)
 #define SERIAL_CMD_OFFSET               (0)
 #define SERIAL_SUB_CMD_OFFSET           (3)
